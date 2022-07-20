@@ -1,0 +1,33 @@
+@import "../variables";
+
+.container {
+  font-size: 24px;
+}
+
+.title,
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.steps {
+  align-items: initial;
+  color: rgb(62, 62, 62);
+  margin-top: 1rem;
+  width: 90%;
+  margin-left: 2rem;
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.stepCompleted {
+  color: rgb(50, 145, 21);
+}

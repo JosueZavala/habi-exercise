@@ -1,0 +1,170 @@
+@import "../variables";
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentCards {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.stepCard,
+.summaryCard,
+.stepForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summaryCard {
+  align-items: initial;
+}
+
+.stepForm {
+  width: 80%;
+  input {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  span {
+    font-size: 14px;
+    color: red;
+    margin-bottom: 5px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+.checkBoxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stepCard,
+.summaryCard {
+  height: 50vh;
+  width: 75vh;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 24px;
+  font-weight: 400;
+  @include xxl {
+    width: 60vh;
+  }
+}
+
+.stepLabel {
+  font-size: 14px;
+}
+
+.stepInput {
+  width: 90%;
+  background-color: rgba(250, 253, 255, 0.555);
+  padding: 0.5rem;
+  font-size: 24px;
+  margin: 0.5rem;
+  color: black;
+  border: none;
+  text-align: center;
+  &:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+  }
+}
+
+.stepCheckbox {
+  font-size: 18px;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.stepButton {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  letter-spacing: 0.05em;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.375rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  color: white;
+  background-color: rgb(14, 152, 134);
+  border: 1px solid rgb(45 212 191);
+  height: 3rem;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(240 253 250);
+    color: rgb(14, 152, 134);
+  }
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+}
+
+.costContainer {
+  display: flex;
+  align-items: stretch;
+  width: 70%;
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.currencyLabel {
+  padding-top: 10px;
+}
+
+.fileInput {
+  margin-left: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-height: 860px) {
+  .stepCard,
+  .summaryCard {
+    height: 75vh;
+  }
+  .stepInput {
+    font-size: 14px;
+  }
+  .stepButton {
+    font-size: 14px;
+    height: 2rem;
+  }
+}
