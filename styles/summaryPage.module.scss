@@ -1,0 +1,75 @@
+@import "./variables";
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentCards {
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.summaryCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summaryCard {
+  height: 80vh;
+  width: 90vh;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  @include xxl {
+    width: 60vh;
+  }
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.label,
+.labelAmenities,
+.labelParking {
+  font-size: 18px;
+}
+
+.stepInfo,
+.stepAddress,
+.stepAmenities,
+.stepParking {
+  color: rgb(9, 97, 85);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stepAddress,
+.stepAmenities,
+.stepParking {
+  margin: 0;
+}
+
+.labelAmenities,
+.labelParking {
+  margin-top: 0.3rem;
+}

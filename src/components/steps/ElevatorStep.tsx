@@ -3,6 +3,7 @@ import styles from "../../../styles/Steps/steps.module.scss";
 import { Parking, STEPS, stepsProps } from "../../../typings/typings";
 import { useForm, SubmitHandler } from "react-hook-form";
 import StepButton from "../UI/StepButton";
+import { useRouter } from "next/router";
 
 const Elevator: FC<stepsProps> = ({
   updateStepHandler = (
@@ -11,6 +12,7 @@ const Elevator: FC<stepsProps> = ({
     type?: string
   ) => {},
 }) => {
+  const router = useRouter();
   const { handleSubmit, register, watch } = useForm<any>();
 
   const handlePrevStep = () => {
@@ -19,8 +21,8 @@ const Elevator: FC<stepsProps> = ({
   };
 
   const onSubmit: SubmitHandler<{ elevator: boolean }> = (data) => {
-    console.log(data.elevator);
-    updateStepHandler(STEPS.summary, data.elevator, STEPS.elevator);
+    updateStepHandler("", data.elevator, STEPS.elevator);
+    router.push("/summary");
   };
 
   return (
