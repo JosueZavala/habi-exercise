@@ -1,9 +1,18 @@
 @import "../variables";
 
 .container {
-  background-image: url("../../#{$assetPath}/departamento-habi.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url("../../#{$assetPath}/departamento-habi.jpg") no-repeat center
+    center fixed;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  left: 60%;
+  margin-left: -32px;
+  margin-right: -262px;
+  @include sm {
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
